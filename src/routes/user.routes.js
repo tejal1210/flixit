@@ -3,7 +3,7 @@ import {
     loginUser, 
     logoutUser, 
     registerUser, 
-    // refreshAccessToken, 
+    refreshAccessToken, 
     // changeCurrentPassword, 
     // getCurrentUser, 
     // updateUserAvatar, 
@@ -33,5 +33,6 @@ router.route("/register").post(
 
 router.route("/login").post(loginUser)
 router.route("/logout").post(verifyJWT,  logoutUser)
+router.route("/refresh-token").post(refreshAccessToken)
 
 export default router
